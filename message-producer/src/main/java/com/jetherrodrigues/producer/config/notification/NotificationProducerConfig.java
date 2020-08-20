@@ -16,7 +16,7 @@ public class NotificationProducerConfig {
     public static String NOTIFICATION_HA_QUEUE_DLQ_BINDING_KEY = "bindingKey.notification.ha.dlq";
 
     @Bean
-    DirectExchange exchange() {
+    DirectExchange notificationExchange() {
         return ExchangeBuilder
                 .directExchange(DIRECT_NOTIFICATION_HA_QUEUE_EXCHANGE)
                 .durable(true)
@@ -24,7 +24,7 @@ public class NotificationProducerConfig {
     }
 
     @Bean
-    DirectExchange dlqExchange() {
+    DirectExchange notificationDlqExchange() {
         return ExchangeBuilder
                 .directExchange(DIRECT_NOTIFICATION_HA_QUEUE_DLQ_EXCHANGE)
                 .durable(true)
@@ -49,16 +49,16 @@ public class NotificationProducerConfig {
     }
 
     @Bean
-    public Binding binding() {
+    public Binding notificationBinding() {
         return BindingBuilder.bind(notificationQueue())
-                .to(exchange())
+                .to(notificationExchange())
                 .with(NOTIFICATION_HA_QUEUE_BINDING_KEY);
     }
 
     @Bean
-    public Binding dlqBinding() {
+    public Binding notificationDlqBinding() {
         return BindingBuilder.bind(notificationDlqQueue())
-                .to(dlqExchange())
+                .to(notificationDlqExchange())
                 .with(NOTIFICATION_HA_QUEUE_DLQ_BINDING_KEY);
     }
 }
