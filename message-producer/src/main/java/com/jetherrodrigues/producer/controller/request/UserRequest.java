@@ -38,4 +38,12 @@ public final class UserRequest implements Serializable {
     public User toUser() {
         return new User(this.username, this.email);
     }
+
+    @Override
+    public String toString() {
+        return "UserRequest{" +
+                "username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }
