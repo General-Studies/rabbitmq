@@ -23,7 +23,7 @@ public class NotificationProducer implements Producer<User> {
         try {
             rabbitTemplate.convertAndSend(
                     NotificationProducerConfig.DIRECT_NOTIFICATION_HA_QUEUE_EXCHANGE,
-                    NotificationProducerConfig.NOTIFICATION_HA_QUEUE,
+                    NotificationProducerConfig.NOTIFICATION_HA_QUEUE_BINDING_KEY,
                     user
             );
         } catch (final Exception ex) {
