@@ -6,11 +6,6 @@ public final class QueueDefinition {
     public static String CONSOLIDATION_HA_QUEUE_DLQ = "CONSOLIDATION_HA_QUEUE_DLQ";
     public static String CONSOLIDATION_HA_QUEUE_DLQ_BINDING_KEY = "CONSOLIDATION_HA_QUEUE_DLQ_BINDING_KEY";
 
-    public static String ALERT_HA_QUEUE = "ALERT_HA_QUEUE";
-    public static String ALERT_HA_QUEUE_BINDING_KEY = "ALERT_HA_QUEUE_BINDING_KEY";
-    public static String ALERT_HA_QUEUE_DLQ = "ALERT_HA_QUEUE_DLQ";
-    public static String ALERT_HA_QUEUE_DLQ_BINDING_KEY = "ALERT_HA_QUEUE_DLQ_BINDING_KEY";
-
     public static String BOLETIM_HA_QUEUE = "BOLETIM_HA_QUEUE";
     public static String BOLETIM_HA_QUEUE_BINDING_KEY = "BOLETIM_HA_QUEUE_BINDING_KEY";
     public static String BOLETIM_HA_QUEUE_DLQ = "BOLETIM_HA_QUEUE_DLQ";
